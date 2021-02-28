@@ -1,4 +1,5 @@
 {
+  "start":"node/server.js",
   "name": "authentication",
   "version": "1.0.0",
   "description": "simple use of passport-local authentiction",
