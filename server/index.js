@@ -8,8 +8,9 @@ const path = require('path')
 const cors = require('cors')
 const cookSession = require('cookie-session')
 
-// Importing our Login Service Used With the POST Login Route
+// Importing our Login and Register Services
 const loginService = require('./services/loginService')
+const registerService = require('./services/registerService')
 
 
 
