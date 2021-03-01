@@ -22,46 +22,38 @@
       <form id="register" action="/register" method="POST">
         
         <div class="form-control">
-            <label for="email">Account Email Address 
-            
-            <span class="warning"><%- emailWarning %></span></label>
-          <input
-            id="email"
-            type="text"
-            name="email"
-            placeholder="account@email.com"
-            value="<%-email%>"/>
-     
+            <label for="email">Account Email Address</label>
+            <input
+                id="email"
+                type="text"
+                name="email"
+                placeholder="account@email.com"
+                value="<%-email%>"/>
         </div>
         
         <div class="form-control">
-            <label for="userName">Account User Name 
-                
-            <span class="warning"><%- userNameWarning %></span></label>
+            <label for="userName">Account User Name</label>
             <input
                 id="userName"
                 type="text"
                 name="userName"
-                placeholder="JohnDoe"
+                placeholder="John Doe"
                 value="<%-userName%>"/>
-         
         </div>
 
         <div class="form-control">
-          <label for="password">
-            Account password 
-            <span class="warning"><%- passwordWarning %> </span></label>
-          <input
-            id="password"
-            type="text"
-            name="password"
-            placeholder="account password "
-            value="<%- password %>"
-          />
+            <label for="password">Account Password </label>
+            <input
+                id="password"
+                type="text"
+                name="password"
+                placeholder="account password"
+                value="<%- password%>"
+            />
         </div>
 
         <div class="form-control">
-          <button type="submit">register</button>
+            <button type="submit">register</button>
         </div>
       </form>
     </aside>
