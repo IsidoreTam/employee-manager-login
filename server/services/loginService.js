@@ -2,7 +2,7 @@
   Login Service Will Authenticate an email and password
   return a true or false response.
   false returns will keep users on the login page with errors
-  true will redirect user to the dashboard.html
+  true will redirect user to the dashboard.ejs
 */
 const fileService = require('./fileService')
  
