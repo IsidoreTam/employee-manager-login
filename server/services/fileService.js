@@ -25,7 +25,7 @@ exports.writeFileContents = (filePath, data) =>{
     fs.writeFileSync(path.join(__dirname, filePath), fileContents)
 }
 
-
- 
-
- 
+exports.writeDataToFile = (filePath, data) => {
+    const fileContents = JSON.stringify(data)
+    fs.writeFileSync(path.join(__dirname, filePath), fileContents)
+}
