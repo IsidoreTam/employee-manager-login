@@ -7,7 +7,14 @@
         "../scss/_navbar.scss",
         "../scss/_page-header.scss",
         "../scss/_form.scss",
-        "../scss/_dashboard.scss"
+        "../scss/dashboard/_index.scss",
+        "../scss/dashboard/_layout.scss",
+        "../scss/dashboard/_control-strip.scss",
+        "../scss/dashboard/_display-panels.scss",
+        "../scss/dashboard/_department-manager.scss",
+        "../scss/dashboard/_department-employee.scss",
+        "../scss/dashboard/_key-points.scss",
+        "../scss/dashboard/_sidebar.scss"
     ],
     "names": [],
     "file": "styles.css"
