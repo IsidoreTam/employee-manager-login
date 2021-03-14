@@ -40,7 +40,6 @@ class Department {
   }
 
     updateEmployeeData(data){
-    //  snippet # 8
     const employees = this.getData()
     
      const newEmployeeData = employees.map(employee =>{

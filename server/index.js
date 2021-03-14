@@ -11,8 +11,7 @@ const cookSession = require('cookie-session')
 // Importing our Login and Register Services
 const loginService = require('./services/loginService')
 const registerService = require('./services/registerService')
-
-
+const departmentRoutes = require('./routes/departmentRouter')
 
 // create an instance of express
 const app = express()
@@ -30,6 +29,7 @@ app.use(cors())
 //To get access to the name value pairs send in the message Body of POST Request.
  app.use(express.urlencoded({extended:true}))
  app.use(express.json())
+ app.use(express.raw())
 
  // Session Middleware
  app.use(cookSession({
@@ -101,32 +101,23 @@ app.use(express.static(path.join(__dirname, "../client"), {extensions: ["html", 
        }
   })
     
- 
- app.post('/login', (req, res)=>{
-   // POST name value pairs in body request
-   const credentials = {
-     email:req.body.email,
-     password:req.body.password
-    }
-    
-    
-    const isValidUser = loginService.authenticate(credentials)
-   
-    res.end()
- 
- })
 
- 
+  app.get('/users', (req, res)=>{
+    // read using the file service
+    // return as json
+    const date = fileService.readFile('../data/user.json')
+    res.json(data)
+})
+
+app.use('/api/departments', departmentRoutes())
 
 // Final Middleware 
 // Catch all for any request not handled while express was
 // processing requests. 
 // Returns 404 Page from the client directory.
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "../client/404.html"));
+ res.status(404).sendFile(path.join(__dirname, "../client/404.html"));
 });
-
-
 
 // Tell express app to listen for incomming request on a specific PORT
 app.listen(PORT, () => {
